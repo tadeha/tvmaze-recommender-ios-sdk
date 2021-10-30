@@ -1,0 +1,1 @@
+Here will be added icons of the apps used our SDK.
