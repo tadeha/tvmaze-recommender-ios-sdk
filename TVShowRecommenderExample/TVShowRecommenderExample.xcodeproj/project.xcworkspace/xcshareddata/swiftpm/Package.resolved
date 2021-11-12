@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "TVShowRecommender",
+        "repositoryURL": "https://github.com/tadeha/tvmaze-recommender-ios-sdk",
+        "state": {
+          "branch": null,
+          "revision": "93bd3b128abdd66c39d49d85ffa4b4300e9fd64d",
+          "version": "1.0.6"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
