@@ -1,33 +1,26 @@
 import Foundation
 
-struct SimilarShows: Codable {
-    let similarShow: [String: String]
+public struct MovieRecommender {
     
-    enum CodingKeys: String, CodingKey {
-        case similarShow = "similar_show"
-    }
-}
-
-struct TVShow: Codable {
-    let id, name: String
-}
-
-public class MovieRecommender {
-    
-    static var shared = MovieRecommender()
+    static public var shared = MovieRecommender()
     
     private init() {}
     
-    func getRecommendation(for showID: Int, numberOfResonse: Int, completion: @escaping ([TVShow]?) -> Void) {
+    public enum SearchType {
+        case weighted, basic
+    }
+    
+    public func getRecommendation(for showID: Int, numberOfResponse: Int, searchType: SearchType = .basic, completion: @escaping ([TVShow]?) -> Void) {
         if let url = URL(string: "https://tvmaze-flask-model.herokuapp.com/recommend") {
             var request = URLRequest(url: url)
-            request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             request.httpMethod = "POST"
-            let parameters: [String: Any] = [
+            let body: [String: Any] = [
                 "show_id": showID,
-                "num_of_recs": numberOfResonse
+                "num_of_recs": numberOfResponse,
+                "weighted_model" : searchType == .basic ? true : false
             ]
-            request.httpBody = parameters.percentEncoded()
+            request.httpBody = try? JSONSerialization.data(withJSONObject: body)
             
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 guard let data = data,
