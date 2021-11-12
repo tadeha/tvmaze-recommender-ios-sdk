@@ -13,15 +13,16 @@ Show Recommender System with TVMaze dataset
 
 - File > Swift Packages > Add Package Dependency
 - Add `https://github.com/tadeha/tvmaze-recommender-ios-sdk`
-- Select "Up to Next Major" with "1.0.0"
+- Select "Up to Next Major" with "1.1.0"
 ## Usage/Examples
 
 ```javascript
-import Component from 'my-project'
+import TVShowRecommender
 
-function App() {
-  return <Component />
+TVShowRecommender.shared.getRecommendation(for: showId, numberOfResponse: 10) { shows in            print("Similar shows => \(shows)")
 }
+
+For More detail and xxample check TVShowRecommenderExample Project
 ```
 
 
