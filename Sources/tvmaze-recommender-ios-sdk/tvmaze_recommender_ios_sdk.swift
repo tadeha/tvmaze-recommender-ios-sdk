@@ -30,7 +30,7 @@ public struct MovieRecommender {
             let body: [String: Any] = [
                 "show_id": showID,
                 "num_of_recs": numberOfResponse,
-                "weighted_model" : searchType == .basic ? true : false
+                "weighted_model" : searchType == .basic ? false : true
             ]
             request.httpBody = try? JSONSerialization.data(withJSONObject: body)
             
