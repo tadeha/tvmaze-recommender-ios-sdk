@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "tvmaze-recommender-ios-sdk",
+    platforms: [
+        .iOS(.v12)
+    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -23,6 +26,7 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "tvmaze-recommender-ios-sdkTests",
-            dependencies: ["tvmaze-recommender-ios-sdk"]),
+            dependencies: ["tvmaze-recommender-ios-sdk"],
+            path: "Sources/tvmaze-recommender-ios-sdk"),
     ]
 )
