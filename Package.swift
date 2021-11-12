@@ -23,10 +23,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "tvmaze-recommender-ios-sdk",
-            dependencies: []),
-        .testTarget(
-            name: "tvmaze-recommender-ios-sdkTests",
-            dependencies: ["tvmaze-recommender-ios-sdk"],
-            path: "Sources/tvmaze-recommender-ios-sdk"),
+            dependencies: [],
+            path: "Sources")
     ]
 )
