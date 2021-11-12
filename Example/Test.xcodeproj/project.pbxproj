@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB69C49B273EE87E0025EE04 /* tvmaze-recommender-ios-sdk in Frameworks */ = {isa = PBXBuildFile; productRef = BB69C49A273EE87E0025EE04 /* tvmaze-recommender-ios-sdk */; };
 		BBEE673E273E59730077E9B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEE673D273E59730077E9B6 /* AppDelegate.swift */; };
 		BBEE6740273E59730077E9B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEE673F273E59730077E9B6 /* SceneDelegate.swift */; };
 		BBEE6742273E59730077E9B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEE6741273E59730077E9B6 /* ViewController.swift */; };
@@ -34,7 +33,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB69C49B273EE87E0025EE04 /* tvmaze-recommender-ios-sdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +95,6 @@
 			);
 			name = Test;
 			packageProductDependencies = (
-				BB69C49A273EE87E0025EE04 /* tvmaze-recommender-ios-sdk */,
 			);
 			productName = Test;
 			productReference = BBEE673A273E59730077E9B6 /* Test.app */;
@@ -391,14 +388,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		BB69C49A273EE87E0025EE04 /* tvmaze-recommender-ios-sdk */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BB69C499273EE87E0025EE04 /* XCRemoteSwiftPackageReference "tvmaze-recommender-ios-sdk" */;
-			productName = "tvmaze-recommender-ios-sdk";
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BBEE6732273E59730077E9B6 /* Project object */;
 }

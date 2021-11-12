@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/tadeha/tvmaze-recommender-ios-sdk",
         "state": {
           "branch": null,
-          "revision": "1a5e36d071eef99cff270123a2e254b8daff8407",
-          "version": "1.0.2"
+          "revision": "fe2db86da82deb5bf82d43770b6aae16ad7fccae",
+          "version": "1.0.3"
         }
       }
     ]

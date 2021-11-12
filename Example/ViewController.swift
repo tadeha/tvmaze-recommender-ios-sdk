@@ -4,7 +4,7 @@
 //
 //  Created by Alireza on 11/12/21.
 //
-import tvmaze_recommender_ios_sdk
+import TVShowRecommender
 import UIKit
 
 class ViewController: UIViewController {
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     func search(for showId: Int) {
         self.activityIndicator.startAnimating()
         self.activityIndicator.isHidden = false
-        MovieRecommender.shared.getRecommendation(for: showId, numberOfResponse: 10) { shows in
+        TVShowRecommender.shared.getRecommendation(for: showId, numberOfResponse: 10) { shows in
             self.shows = shows ?? []
         }
     }
