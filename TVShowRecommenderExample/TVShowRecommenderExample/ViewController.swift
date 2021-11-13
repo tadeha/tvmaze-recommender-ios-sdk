@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     func search(for showId: Int) {
         self.activityIndicator.startAnimating()
         self.activityIndicator.isHidden = false
-        TVShowRecommender.shared.getRecommendation(for: showId, numberOfResponse: 10) { shows in
+        TVShowRecommender.shared.getRecommendation(for: showId, numberOfRecs: 10) { shows in
             self.shows = shows ?? []
         }
     }
