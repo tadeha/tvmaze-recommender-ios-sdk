@@ -20,7 +20,7 @@ Recommendation system for TV shows using the [TVMaze](https://www.tvmaze.com/) d
 ```swift
 import TVShowRecommender
 
-TVShowRecommender.shared.getRecommendation(for: showId, numberOfResponse: 10) { shows in
+TVShowRecommender.shared.getRecommendation(for: showId, numberOfRecs: 10, searchType: .basic) { shows in
     print("Similar shows => \(shows)")
 }
 ```
