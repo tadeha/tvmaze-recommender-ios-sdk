@@ -1,4 +1,4 @@
-![Notification Banner](header.png)
+![TV Maze Recommender](Assets/header.png)
 
 # TVMaze Recommender System iOS SDK
 
