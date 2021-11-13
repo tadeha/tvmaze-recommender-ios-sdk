@@ -34,7 +34,7 @@ I'd love to know anything that you think this library is missing. Open an issue 
 
 This project is used by the following applications:
 
-- [TVClub](https://apps.apple.com/us/app/tv-club-simple-tv-tracker/id334565283)
+- TBC
 
 **Feel free to add yours!**
 
