@@ -7,18 +7,28 @@ public struct TVShowRecommender {
     private init() {}
     
     public enum SearchType {
-        case weighted, basic
+        /// In this version of nearest neighbors, each TV show feature got a different weight depending on its importance (e.g. genre has the highest weight due to its importance).
+        case weighted
+        
+        /// A simple non-weighted nearest neighbors search model.
+        case basic
     }
     
-    public func getRecommendation(for showID: Int, numberOfResponse: Int, searchType: SearchType = .basic, completion: @escaping ([TVShow]?) -> Void) {
+    /// Get Recommeded TV Shows TVMaze Show IDs
+    /// - Parameters:
+    ///   - showID: Corresponding TV Show ID from TVMaze.
+    ///   - numberOfRecs: How many similar shows do you want to find from Show ID?
+    ///   - searchType: Switch between different search types which correspond to the type of machine learning model used.
+    ///   - completion: returns list of recommended tv shows
+    public func getRecommendation(for showID: Int, numberOfRecs: Int = 10, searchType: SearchType = .basic, completion: @escaping ([TVShow]?) -> Void) {
         if let url = URL(string: "https://tvmaze-flask-model.herokuapp.com/recommend") {
             var request = URLRequest(url: url)
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             request.httpMethod = "POST"
             let body: [String: Any] = [
                 "show_id": showID,
-                "num_of_recs": numberOfResponse,
-                "weighted_model" : searchType == .basic ? false : true
+                "num_of_recs": numberOfRecs,
+                "weighted_model" : searchType == .weighted ? true : false
             ]
             request.httpBody = try? JSONSerialization.data(withJSONObject: body)
             
