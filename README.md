@@ -1,3 +1,5 @@
+![Notification Banner](header.png)
+
 # TVMaze Recommender System iOS SDK
 
 Recommendation system for TV shows using the [TVMaze](https://www.tvmaze.com/) dataset.
