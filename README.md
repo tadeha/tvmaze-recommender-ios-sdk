@@ -2,7 +2,7 @@
 
 # TVMaze Recommender System iOS SDK
 
-Recommendation system for TV shows using the [TVMaze](https://www.tvmaze.com/) dataset. (beta)
+Recommendation system for TV shows using the [TVMaze](https://www.tvmaze.com/) dataset and Nearest Neighbors Machine Learning model. (beta)
 
 ## Requirements
 
