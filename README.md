@@ -1,8 +1,8 @@
 ![TV Maze Recommender](Assets/header.png)
 
-[![License](https://img.shields.io/cocoapods/l/RxBinding.svg?style=flat)]()
-[![Platform](https://img.shields.io/cocoapods/p/RxBinding.svg?style=flat)]()
-[![swift](https://img.shields.io/badge/swift-5.0-orange.svg)]()
+<p align="center">
+   <a href="https://github.com/tadeha/tvmaze-recommender-ios-sdk"><img src="https://badgen.net/github/release/babel/babel/stable" /></a>
+</p>
 
 # TVMaze Recommender System iOS SDK
 
