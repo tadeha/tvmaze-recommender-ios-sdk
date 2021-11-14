@@ -2,6 +2,7 @@
 
 <p align="center">
    <a href="https://github.com/tadeha/tvmaze-recommender-ios-sdk"><img src="https://badgen.net/github/release/babel/babel/stable" /></a>
+   <a href="https://github.com/tadeha/tvmaze-recommender-ios-sdk"><img src="https://badgen.net/badge/license/MIT/blue" /></a>
 </p>
 
 # TVMaze Recommender System iOS SDK
