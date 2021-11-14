@@ -1,5 +1,8 @@
 ![TV Maze Recommender](Assets/header.png)
 
+https://badgen.net/badge/github/release/babel/babel
+
+
 # TVMaze Recommender System iOS SDK
 
 Recommendation system for TV shows using the [TVMaze](https://www.tvmaze.com/) dataset and Nearest Neighbors Machine Learning model. (beta)
