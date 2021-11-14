@@ -1,9 +1,10 @@
 ![TV Maze Recommender](Assets/header.png)
 
 <p align="center">
-   <a href="https://github.com/tadeha/tvmaze-recommender-ios-sdk"><img src="https://badgen.net/github/release/babel/babel/stable" /></a>
+   <a href="https://github.com/tadeha/tvmaze-recommender-ios-sdk"><img src="https://badgen.net/github/releases/tadeha/tvmaze-recommender-ios-sdk/" /></a>
    <a href="https://github.com/tadeha/tvmaze-recommender-ios-sdk"><img src="https://badgen.net/badge/Swift/5.0/orange" /></a>
-   <a href="https://github.com/tadeha/tvmaze-recommender-ios-sdk"><img src="https://badgen.net/badge/license/MIT/blue" /></a>
+   <a href="https://github.com/tadeha/tvmaze-recommender-ios-sdk"><img src="https://badgen.net/github/license/tadeha/tvmaze-recommender-ios-sdk/" /></a>
+   <a href="https://github.com/tadeha/tvmaze-recommender-ios-sdk"><img src="https://badgen.net/github/stars/tadeha/tvmaze-recommender-ios-sdk/" /></a>
 </p>
 
 # TVMaze Recommender System iOS SDK
