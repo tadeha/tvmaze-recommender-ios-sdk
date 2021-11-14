@@ -6,7 +6,7 @@
    <img src="https://img.shields.io/badge/platforms-iOS-333333.svg" />
    <a href="https://github.com/tadeha/tvmaze-recommender-ios-sdk"><img src="https://badgen.net/github/license/tadeha/tvmaze-recommender-ios-sdk/" /></a>
 <!--    <a href="https://github.com/tadeha/tvmaze-recommender-ios-sdk"><img src="https://badgen.net/github/stars/tadeha/tvmaze-recommender-ios-sdk/" /></a> -->
-   <a href="https://twitter.com/twostraws">
+   <a href="https://twitter.com/Tadeh19">
         <img src="https://img.shields.io/badge/Contact-@tadeh19-blueviolet.svg?style=flat" alt="Twitter: @tadeh19" />
     </a>
 </p>
