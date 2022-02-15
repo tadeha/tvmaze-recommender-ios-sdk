@@ -49,7 +49,7 @@ public struct TVShowRecommender {
                 }
                 
                 if let decodedResponse = try? JSONDecoder().decode(SimilarShows.self, from: data) {
-                    let shows = decodedResponse.similarShow.compactMap { (key, value) in
+                    let shows = decodedResponse.recommendations.compactMap { (key, value) in
                         return TVShow(id: key, name: value)
                     }
                     completion(shows)
