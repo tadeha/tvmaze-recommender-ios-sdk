@@ -49,6 +49,7 @@ public struct TVShowRecommender {
                 }
                 
                 if let decodedResponse = try? JSONDecoder().decode(SimilarShows.self, from: data) {
+                    print("response => \(decodedResponse)")
                     completion(decodedResponse.recommendations, decodedResponse.trending_shows)
                     return
                 } else {

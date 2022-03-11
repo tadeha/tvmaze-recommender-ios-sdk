@@ -23,6 +23,7 @@ class ViewController: UIViewController {
             }
         }
     }
+    var isTrends: Bool = false
     
     @IBAction func searchButtonDidTap(_ sender: UIButton) {
         if let showId = Int(searchTextField.text ?? "") {
@@ -47,7 +48,8 @@ class ViewController: UIViewController {
     func search(for showId: Int) {
         self.activityIndicator.startAnimating()
         self.activityIndicator.isHidden = false
-        TVShowRecommender.shared.getRecommendation(for: showId, numberOfRecs: 10) { shows in
+        TVShowRecommender.shared.getRecommendation(for: showId, numberOfRecs: 10) { shows, isTrends  in
+            self.isTrends = isTrends
             self.shows = shows ?? []
         }
     }
@@ -62,7 +64,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShowTableViewCell", for: indexPath) as! ShowTableViewCell
         let cellData = shows[indexPath.row]
         cell.nameLabel.text = cellData.name
-        cell.idLabel.text = cellData.id
+        cell.idLabel.text = cellData.id.description
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if isTrends {
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 100))
+            label.textAlignment = .center
+            label.textColor = .systemRed
+            label.text = "No result, These are trending shows!!"
+            return label
+        }
+        return nil
     }
 }

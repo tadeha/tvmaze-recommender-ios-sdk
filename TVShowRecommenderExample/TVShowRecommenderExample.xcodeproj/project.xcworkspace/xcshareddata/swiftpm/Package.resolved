@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/tadeha/tvmaze-recommender-ios-sdk",
       "state" : {
-        "revision" : "5746aa08312167a9feb4975a3da8555efed8881c",
-        "version" : "1.0.1"
+        "branch" : "main",
+        "revision" : "4dcfff6f90ebcb12aa4ab3a3e5e69ef961e005d4"
       }
     }
   ],
