@@ -8,9 +8,11 @@
 import Foundation
 
 struct SimilarShows: Codable {
-    let recommendations: [String: String]
+    let recommendations: [TVShow]
+    let trending_shows: Bool
 }
 
 public struct TVShow: Codable {
-    public let id, name: String
+    public let name: String
+    public let weight, id: Int
 }

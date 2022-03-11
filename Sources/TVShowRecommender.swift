@@ -20,7 +20,7 @@ public struct TVShowRecommender {
     ///   - numberOfRecs: How many similar shows do you want to find from Show ID?
     ///   - searchType: Switch between different search types which correspond to the type of machine learning model used.
     ///   - completion: returns list of recommended tv shows
-    public func getRecommendation(for showID: Int, numberOfRecs: Int = 10, searchType: SearchType = .basic, completion: @escaping ([TVShow]?) -> Void) {
+    public func getRecommendation(for showID: Int, numberOfRecs: Int = 10, searchType: SearchType = .basic, completion: @escaping ([TVShow]?, Bool) -> Void) {
         if let url = URL(string: "https://tvmaze-flask-model.herokuapp.com/recommend") {
             var request = URLRequest(url: url)
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -37,25 +37,22 @@ public struct TVShowRecommender {
                       let response = response as? HTTPURLResponse,
                       error == nil else {
                           print("error", error ?? "Unknown error")
-                          completion(nil)
+                          completion(nil, false)
                           return
                       }
                 
                 guard (200 ... 299) ~= response.statusCode else {
                     print("statusCode should be 2xx, but is \(response.statusCode)")
                     print("response = \(response)")
-                    completion(nil)
+                    completion(nil, false)
                     return
                 }
                 
                 if let decodedResponse = try? JSONDecoder().decode(SimilarShows.self, from: data) {
-                    let shows = decodedResponse.recommendations.compactMap { (key, value) in
-                        return TVShow(id: key, name: value)
-                    }
-                    completion(shows)
+                    completion(decodedResponse.recommendations, decodedResponse.trending_shows)
                     return
                 } else {
-                    completion(nil)
+                    completion(nil, false)
                 }
             }
             task.resume()
