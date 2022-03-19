@@ -65,17 +65,25 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cellData = shows[indexPath.row]
         cell.nameLabel.text = cellData.name
         cell.idLabel.text = cellData.id.description
+        cell.selectionStyle = .none
         return cell
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if isTrends {
-            let label = UILabel(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 100))
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 40))
             label.textAlignment = .center
             label.textColor = .systemRed
             label.text = "No result, These are trending shows!!"
             return label
         }
         return nil
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if isTrends {
+            return 40
+        }
+        return 0
     }
 }

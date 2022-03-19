@@ -50,7 +50,7 @@ public struct TVShowRecommender {
                 
                 if let decodedResponse = try? JSONDecoder().decode(SimilarShows.self, from: data) {
                     print("response => \(decodedResponse)")
-                    completion(decodedResponse.recommendations.sorted(by: {$0.weight < $1.weight}), decodedResponse.trending_shows)
+                    completion(decodedResponse.recommendations.sorted(by: {$0.weight > $1.weight}), decodedResponse.trending_shows)
                     return
                 } else {
                     completion(nil, false)

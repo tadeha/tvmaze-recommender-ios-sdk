@@ -14,7 +14,7 @@
 		BB69C4B2273EEAE50025EE04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB69C4B1273EEAE50025EE04 /* Assets.xcassets */; };
 		BB69C4B5273EEAE50025EE04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB69C4B3273EEAE50025EE04 /* LaunchScreen.storyboard */; };
 		BB69C4C0273EEB200025EE04 /* ShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB69C4BF273EEB200025EE04 /* ShowTableViewCell.swift */; };
-		BBE4F95027DBFC91003E5FD5 /* TVShowRecommender in Frameworks */ = {isa = PBXBuildFile; productRef = BBE4F94F27DBFC91003E5FD5 /* TVShowRecommender */; };
+		BBE4F95327DBFD58003E5FD5 /* TVShowRecommender in Frameworks */ = {isa = PBXBuildFile; productRef = BBE4F95227DBFD58003E5FD5 /* TVShowRecommender */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBE4F95027DBFC91003E5FD5 /* TVShowRecommender in Frameworks */,
+				BBE4F95327DBFD58003E5FD5 /* TVShowRecommender in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +89,7 @@
 			);
 			name = TVShowRecommenderExample;
 			packageProductDependencies = (
-				BBE4F94F27DBFC91003E5FD5 /* TVShowRecommender */,
+				BBE4F95227DBFD58003E5FD5 /* TVShowRecommender */,
 			);
 			productName = TVShowRecommenderExample;
 			productReference = BB69C4A5273EEAE30025EE04 /* TVShowRecommenderExample.app */;
@@ -120,7 +120,7 @@
 			);
 			mainGroup = BB69C49C273EEAE30025EE04;
 			packageReferences = (
-				BBE4F94E27DBFC91003E5FD5 /* XCRemoteSwiftPackageReference "tvmaze-recommender-ios-sdk" */,
+				BBE4F95127DBFD58003E5FD5 /* XCRemoteSwiftPackageReference "tvmaze-recommender-ios-sdk" */,
 			);
 			productRefGroup = BB69C4A6273EEAE30025EE04 /* Products */;
 			projectDirPath = "";
@@ -374,7 +374,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BBE4F94E27DBFC91003E5FD5 /* XCRemoteSwiftPackageReference "tvmaze-recommender-ios-sdk" */ = {
+		BBE4F95127DBFD58003E5FD5 /* XCRemoteSwiftPackageReference "tvmaze-recommender-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tadeha/tvmaze-recommender-ios-sdk";
 			requirement = {
@@ -385,9 +385,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BBE4F94F27DBFC91003E5FD5 /* TVShowRecommender */ = {
+		BBE4F95227DBFD58003E5FD5 /* TVShowRecommender */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BBE4F94E27DBFC91003E5FD5 /* XCRemoteSwiftPackageReference "tvmaze-recommender-ios-sdk" */;
+			package = BBE4F95127DBFD58003E5FD5 /* XCRemoteSwiftPackageReference "tvmaze-recommender-ios-sdk" */;
 			productName = TVShowRecommender;
 		};
 /* End XCSwiftPackageProductDependency section */
