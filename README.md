@@ -47,7 +47,7 @@ I'd love to know anything that you think this library is missing. Open an issue 
 
 This project is used by the following applications:
 
-- TBC
+- [TV Club app](https://tvclub.app) for iOS
 
 **Feel free to add yours!**
 
